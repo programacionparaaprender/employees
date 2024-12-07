@@ -29,7 +29,7 @@ export const appConfig: ApplicationConfig = {
     /* provideAppCheck(() => {
       // TODO get a reCAPTCHA Enterprise here https://console.cloud.google.com/security/recaptcha?project=_
       const provider = new ReCaptchaEnterpriseProvider(
-        'AIzaSyCjrfXzDQzmIeMW5ie-xmcHx6bGvF5wbF8'
+        '<>'
       );
       return initializeAppCheck(undefined, {
         provider,
