@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+/* 
+@import "~bootstrap/dist/css/bootstrap.css"; */
+
+
+
+
+body {
+    background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6));
+    background-image: url(./assets/fondo-bienvenido-grande.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+body2 {
+  background: #3e5151; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #decba4,
+    #3e5151
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #decba4,
+    #3e5151
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

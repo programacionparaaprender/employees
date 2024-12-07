@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <span class="h3">Listado de empleados</span>
+      <button 
+        class="btn btn-dark btn-lg float-end" 
+        (click)="btnAdd()">
+        Agregar
+      </button>
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Documento</th>
+            <th>Salario</th>
+            <th>Fecha de creación</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+
+          @for (item of (item$ | async); track item) {
+            <tr>
+              <td>{{ item.name }}</td>
+              <td>{{ item.lastname }}</td>
+              <td>{{ item.document }}</td>
+              <td>{{ item.salary }}</td>
+              @if(item.createDate){
+                <td>{{ item.createDate | date: 'dd/MM/yyyy'   }}</td>
+              }
+              @else {
+                <td></td>
+              }
+              <td>
+                  <i class="fas fa-edit fa-lg text-info me-2" (click)="btnEdit(item.id)"></i>
+                  <i class="fas fa-trash-alt fa-lg text-danger" (click)="btnDelet(item.id)"></i>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
